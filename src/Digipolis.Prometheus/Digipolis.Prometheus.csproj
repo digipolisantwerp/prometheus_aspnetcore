@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>The toolbox provides Prometheus metrics for .net core projects</Description>
+    <Authors>test</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Digipolis.Prometheus</AssemblyName>
+    <PackageId>Digipolis.Prometheus</PackageId>
+    <PackageTags>Toolbox;Prometheus</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <NetStandardImplicitPackageVersion>2.0.0</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="prometheus-net.AspNetCore" Version="2.1.0" />
+  </ItemGroup>
+
+</Project>

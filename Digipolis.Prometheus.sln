@@ -1,0 +1,46 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A2A0FF68-53E4-F65B-F871-DC3AB1EEC749}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+	ProjectSection(FolderGlobals) = preProject
+		global_1json__JSONSchema = http://json.schemastore.org/global
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8D987D63-54CA-4DF5-1323-D3A6DDB96BE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{27ADF5A0-0819-32CF-0E0B-FD5886D618B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digipolis.Prometheus", "src\Digipolis.Prometheus\Digipolis.Prometheus.csproj", "{CA174D7E-34ED-D716-0B02-FDC873794207}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digipolis.Prometheus.UnitTests", "test\Digipolis.Prometheus.UnitTests\Digipolis.Prometheus.UnitTests.csproj", "{F5B7B4BB-AB23-3E3E-8D60-5C69B11BA149}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA174D7E-34ED-D716-0B02-FDC873794207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA174D7E-34ED-D716-0B02-FDC873794207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA174D7E-34ED-D716-0B02-FDC873794207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA174D7E-34ED-D716-0B02-FDC873794207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B7B4BB-AB23-3E3E-8D60-5C69B11BA149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B7B4BB-AB23-3E3E-8D60-5C69B11BA149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B7B4BB-AB23-3E3E-8D60-5C69B11BA149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B7B4BB-AB23-3E3E-8D60-5C69B11BA149}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA174D7E-34ED-D716-0B02-FDC873794207} = {8D987D63-54CA-4DF5-1323-D3A6DDB96BE0}
+		{F5B7B4BB-AB23-3E3E-8D60-5C69B11BA149} = {27ADF5A0-0819-32CF-0E0B-FD5886D618B7}
+	EndGlobalSection
+EndGlobal
