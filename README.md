@@ -51,6 +51,6 @@ The order of the Use-statements determines the order of middleware execution.
 
 The listed metrics are the default metrics provided by Prometheus-Net NuGet Package plus a few custom metrics:
 * counter http_request_count with labels "method - route - code". Code is the HTTP status code of the response.
-* histogram with labels "method - route - code" and divided in buckets.
+* histogram http_request_duration_ms with labels "method - route - code" and divided in buckets.
 
 The metrics can be pulled from the added "/metrics"-endpoint of your API.
