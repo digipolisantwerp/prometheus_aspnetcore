@@ -13,7 +13,7 @@ namespace Digipolis.Prometheus
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
-        public static IApplicationBuilder UseMetrics(this IApplicationBuilder app)
+        public static IApplicationBuilder UseMetrics(this IApplicationBuilder app, string route = "/metrics")
         {
             var counter = Metrics.CreateCounter("http_request_count", "Number of HTTP requests", new CounterConfiguration
             {
@@ -42,7 +42,8 @@ namespace Digipolis.Prometheus
             });
 
             Console.WriteLine("Start Prometheus metrics server");
-            return app.UseMetricServer();
+
+            return app.UseMetricServer(route);
         }
 
     }

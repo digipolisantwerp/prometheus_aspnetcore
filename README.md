@@ -26,7 +26,7 @@ To add the toolbox to a project, you add the package to the csproj-file :
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Digipolis.Prometheus" Version="1.0.0" />
+    <PackageReference Include="Digipolis.Prometheus" Version="1.1.0" />
   </ItemGroup>
 ``` 
 
@@ -38,10 +38,12 @@ The use of the Prometheus app-metrics toolbox is added in the Configure method o
 Call this method as the first statement in StartUp.Configure for accurate metrics. 
 The order of the Use-statements determines the order of middleware execution.
 
+The route for retrieving metrics is "/metrics" by default, but this can be changed during configuration:
+
 ``` csharp
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IApplicationLifetime appLifetime)
 	{
-		app.UseMetrics();
+		app.UseMetrics("/status/metrics");		// leave parameter empty for the default metrics route
 		
 		// insert other middleware and code ...
 	}
@@ -54,3 +56,4 @@ The listed metrics are the default metrics provided by Prometheus-Net NuGet Pack
 * histogram http_request_duration_ms with labels "method - route - code" and divided in buckets.
 
 The metrics can be pulled from the added "/metrics"-endpoint of your API.
+
